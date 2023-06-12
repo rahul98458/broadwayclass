@@ -1,5 +1,7 @@
 package OOP;
 
+import java.util.Scanner;
+
 public class Rectangle {
     int length;
     int breadth;
@@ -16,15 +18,21 @@ public class Rectangle {
     }
     public static void main(String[] args) {
         Rectangle obj = new Rectangle();
-        obj.length=5;
-        obj.breadth=4;
+        Scanner in = new Scanner(System.in);
+        System.out.println("enter the length");
+        obj.length=in.nextInt();
+        System.out.println("enter the breadth");
+         obj.breadth=in.nextInt();
         obj.displayArea();
         obj.displayPerimeter();
-
-         Rectangle obj2 = new Rectangle();
-        obj2.length=3;
-        obj2.breadth=2;
-        obj2.displayArea();
-        obj2.displayPerimeter();
+        in.close();
+        //  Rectangle obj2 = new Rectangle();
+        //   System.out.println("enter the length");
+        // obj2.length=in.nextInt();;
+        //  System.out.println("enter the breadth");
+        // obj2.breadth=in.nextInt();
+        // in.close();
+        // obj2.displayArea();
+        // obj2.displayPerimeter();
     }
 }
