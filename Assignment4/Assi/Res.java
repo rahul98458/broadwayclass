@@ -1,4 +1,4 @@
-package Assi;
+package Assignment4.Assi;
 
 import java.util.Scanner;
 
