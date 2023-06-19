@@ -4,35 +4,35 @@ import java.util.Scanner;
 
 public class SearchByAuthor {
      Book books[]=new Book[2];
-    // Scanner in = new Scanner(System.in);
+     Scanner inp = new Scanner(System.in);
     public static void main(String[] args) {
         SearchByAuthor obj = new SearchByAuthor();
         obj.add();
          obj.searchByAuthor();
     }
     void add()
-    { 
+    {
+   //     Scanner inp = new Scanner(System.in); 
     for(int i=0;i<books.length;i++)
     {
     Book bk = new Book();
-    Scanner in = new Scanner(System.in);
-    System.out.println("enter the book name");
-    bk.setName(in.next());
-     System.out.println("enter the book author");
-    bk.setAuthor(in.next());
-     System.out.println("enter the book price");
-    bk.setPrice(in.nextInt());
-    books[i]=bk;
-
-    }
     
+    System.out.println("enter the book name");
+    bk.setName(inp.next());
+     System.out.println("enter the book author");
+    bk.setAuthor(inp.next());
+     System.out.println("enter the book price");
+    bk.setPrice(inp.nextInt());
+    books[i]=bk;
+    }
+  //inp.close();
 }
     void searchByAuthor()
 {
-    Scanner input = new Scanner(System.in);
+   // Scanner inp = new Scanner(System.in);
     
     System.out.println("enter the author name");
-    String authName=input.nextLine(); 
+    String authName=inp.next(); 
     for (Book bookdat : books) {
      int flag = bookdat.getAuthor().compareTo(authName);
       {
@@ -42,6 +42,6 @@ public class SearchByAuthor {
          }
       }
   }
-  
+
 }
 }
