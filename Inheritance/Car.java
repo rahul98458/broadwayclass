@@ -11,12 +11,12 @@ public class Car extends Vehicle {
     void dispay()
     {
         run();
-        System.out.println(company+geartype+getColor()+getSize());
+        System.out.println(company+" "+geartype+" "+getColor()+" "+getSize());
     }
     public static void main(String[] args) {
         Car c = new Car("red", "meduim", "mahindra", "automated");
         c.dispay();
-            System.out.println(c.toString());
+            System.out.println(c);
     }
     @Override
     public String toString() {
